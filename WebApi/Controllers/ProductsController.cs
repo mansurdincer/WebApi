@@ -1,12 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using WebApi.Cache;
-using WebApi.Data;
-using WebApi.Models;
-
-
-namespace WebApi.Controllers
+﻿namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController, Authorize]

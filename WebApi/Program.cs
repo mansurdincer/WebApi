@@ -1,9 +1,3 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
-using System.Text;
-using WebApi.Cache;
-using WebApi.Data;
 using ConfigurationManager = WebApi.ConfigurationManager;
 
 var builder = WebApplication.CreateBuilder(args);

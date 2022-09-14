@@ -1,6 +1,4 @@
-﻿using StackExchange.Redis;
-
-namespace WebApi.Cache
+﻿namespace WebApi.Cache
 {
     public class ConnectionHelper
     {

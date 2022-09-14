@@ -1,7 +1,4 @@
-﻿using Newtonsoft.Json;
-using StackExchange.Redis;
-
-namespace WebApi.Cache
+﻿namespace WebApi.Cache
 {
     public class CacheService : ICacheService   
     {

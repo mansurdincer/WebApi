@@ -1,8 +1,4 @@
-﻿using AutoMapper;
-using WebApi.DataTransferObjects;
-using WebApi.Models;
-
-namespace WebApi.Data
+﻿namespace WebApi.Data
 {
     public class MappingProfile : Profile
     {

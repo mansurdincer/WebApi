@@ -1,11 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using WebApi.Models;
-
-namespace WebApi.Controllers
+﻿namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

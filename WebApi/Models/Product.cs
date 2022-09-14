@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
-
-namespace WebApi.Models
+﻿namespace WebApi.Models
 {
     public class Product
     {

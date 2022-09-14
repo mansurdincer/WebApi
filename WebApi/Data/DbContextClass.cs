@@ -1,8 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using WebApi.Models;
-using WebApi.DataTransferObjects;
-
-namespace WebApi.Data
+﻿namespace WebApi.Data
 {
     public class DbContextClass : DbContext
     {
@@ -20,6 +16,6 @@ namespace WebApi.Data
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<WebApi.DataTransferObjects.CategoryDTO>? CategoryDTO { get; set; }
+        public DbSet<CategoryDTO>? CategoryDTO { get; set; }
     }
 }
