@@ -9,12 +9,12 @@
         public string Name { get; set; }
         
         [StringLength(100)]
-        public string Description { get; set; }
+        public string? Description { get; set; }
         
-        [Precision(18, 2)]        
-        public decimal Cost { get; set; }
-        
-        public int Stock { get; set; }
+        [Precision(18, 2)]
+        public decimal Cost { get; set; } = decimal.Zero;
+
+        public int Stock { get; set; } = 0;
 
         public int? CategoryId { get; set; }
         public virtual Category Category { get; set; }

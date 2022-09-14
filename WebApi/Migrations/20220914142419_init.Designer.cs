@@ -12,8 +12,8 @@ using WebApi.Data;
 namespace WebApi.Migrations
 {
     [DbContext(typeof(DbContextClass))]
-    [Migration("20220914131823_category")]
-    partial class category
+    [Migration("20220914142419_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,23 +23,6 @@ namespace WebApi.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("WebApi.DataTransferObjects.CategoryDTO", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CategoryDTO");
-                });
 
             modelBuilder.Entity("WebApi.Models.Category", b =>
                 {
@@ -56,6 +39,23 @@ namespace WebApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Kırtasiye"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Elektronik"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Giyim"
+                        });
                 });
 
             modelBuilder.Entity("WebApi.Models.Product", b =>
@@ -74,7 +74,6 @@ namespace WebApi.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -91,6 +90,56 @@ namespace WebApi.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryId = 1,
+                            Cost = 0m,
+                            Name = "Kitap",
+                            Stock = 0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 1,
+                            Cost = 0m,
+                            Name = "Defter",
+                            Stock = 0
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 2,
+                            Cost = 0m,
+                            Name = "Bilgisayar",
+                            Stock = 0
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryId = 2,
+                            Cost = 0m,
+                            Name = "Tablet",
+                            Stock = 0
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryId = 3,
+                            Cost = 0m,
+                            Name = "Pantolon",
+                            Stock = 0
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoryId = 3,
+                            Cost = 0m,
+                            Name = "Etek",
+                            Stock = 0
+                        });
                 });
 
             modelBuilder.Entity("WebApi.Models.Product", b =>
