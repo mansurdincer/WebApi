@@ -1,14 +1,13 @@
-﻿namespace WebApi
+﻿namespace WebApi;
+
+static class ConfigurationManager
 {
-    static class ConfigurationManager
+    public static IConfiguration AppSetting { get; }
+    static ConfigurationManager()
     {
-        public static IConfiguration AppSetting { get; }
-        static ConfigurationManager()
-        {
-            AppSetting = new ConfigurationBuilder()
-                    .SetBasePath(Directory.GetCurrentDirectory())
-                    .AddJsonFile("appsettings.json")
-                    .Build();
-        }
+        AppSetting = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
     }
 }

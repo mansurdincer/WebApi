@@ -1,23 +1,22 @@
-﻿namespace WebApi.Cache
+﻿namespace WebApi.Cache;
+
+public class ConnectionHelper
 {
-    public class ConnectionHelper
+    static ConnectionHelper()
     {
-        static ConnectionHelper()
+        lazyConnection = new Lazy<ConnectionMultiplexer>(() =>
         {
-            lazyConnection = new Lazy<ConnectionMultiplexer>(() =>
-            {
-                return ConnectionMultiplexer.Connect(ConfigurationManager.AppSetting["RedisURL"]);
-            });
-        }
+            return ConnectionMultiplexer.Connect(ConfigurationManager.AppSetting["RedisURL"]);
+        });
+    }
 
-        private static Lazy<ConnectionMultiplexer> lazyConnection;
+    private static Lazy<ConnectionMultiplexer> lazyConnection;
 
-        public static ConnectionMultiplexer Connection
+    public static ConnectionMultiplexer Connection
+    {
+        get
         {
-            get
-            {
-                return lazyConnection.Value;
-            }
+            return lazyConnection.Value;
         }
     }
 }

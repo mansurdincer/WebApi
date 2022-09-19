@@ -1,11 +1,9 @@
-﻿namespace WebApi.Data
+﻿namespace WebApi.Data;
+public class MappingProfile : Profile
 {
-    public class MappingProfile : Profile
+    public MappingProfile()
     {
-        public MappingProfile()
-        {
-            CreateMap<Product, ProductDTO>();
-            CreateMap<Category, CategoryDTO>();
-        }
+        CreateMap<Product, ProductDTO>();
+        CreateMap<Category, CategoryDTO>();
     }
 }
