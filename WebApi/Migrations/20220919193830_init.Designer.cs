@@ -12,7 +12,7 @@ using WebApi.Data;
 namespace WebApi.Migrations
 {
     [DbContext(typeof(DbContextClass))]
-    [Migration("20220916064859_init")]
+    [Migration("20220919193830_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -82,6 +82,9 @@ namespace WebApi.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
                     b.Property<int>("Stock")
                         .HasColumnType("int");
 
@@ -98,6 +101,7 @@ namespace WebApi.Migrations
                             CategoryId = 1,
                             Cost = 0m,
                             Name = "Kitap",
+                            Price = 0,
                             Stock = 0
                         },
                         new
@@ -106,6 +110,7 @@ namespace WebApi.Migrations
                             CategoryId = 1,
                             Cost = 0m,
                             Name = "Defter",
+                            Price = 0,
                             Stock = 0
                         },
                         new
@@ -114,6 +119,7 @@ namespace WebApi.Migrations
                             CategoryId = 2,
                             Cost = 0m,
                             Name = "Bilgisayar",
+                            Price = 0,
                             Stock = 0
                         },
                         new
@@ -122,6 +128,7 @@ namespace WebApi.Migrations
                             CategoryId = 2,
                             Cost = 0m,
                             Name = "Tablet",
+                            Price = 0,
                             Stock = 0
                         },
                         new
@@ -130,6 +137,7 @@ namespace WebApi.Migrations
                             CategoryId = 3,
                             Cost = 0m,
                             Name = "Pantolon",
+                            Price = 0,
                             Stock = 0
                         },
                         new
@@ -138,6 +146,7 @@ namespace WebApi.Migrations
                             CategoryId = 3,
                             Cost = 0m,
                             Name = "Etek",
+                            Price = 0,
                             Stock = 0
                         });
                 });

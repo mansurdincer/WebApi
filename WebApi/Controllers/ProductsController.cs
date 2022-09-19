@@ -1,7 +1,9 @@
-﻿namespace WebApi.Controllers;
+﻿using WebApi.Models;
+
+namespace WebApi.Controllers;
 
 [Route("api/[controller]")]
-[ApiController, Authorize]
+[ApiController]
 public class ProductsController : ControllerBase
 {
     private readonly DbContextClass _context;
@@ -22,6 +24,8 @@ public class ProductsController : ControllerBase
     public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProducts()
     {
         var productCache = _cacheService.GetData<List<ProductDTO>>("Products");
+        int a = 0;
+        int s = 9 / a;
         
         if (productCache == null)
         {
@@ -49,17 +53,26 @@ public class ProductsController : ControllerBase
         {
             //var product = await _context.Products.FindAsync(id);
 
-            ProductDTO? product = await _context.Products.Select(product => _mapper.Map<ProductDTO>(product)).FirstOrDefaultAsync(p => p.Id == id);
-
+            var product = await _context.Products
+                .Where(p => p.Id == id)
+                //.Take(10).Skip(20)
+                //.Count()
+                //.OrderBy(p => p.Id)
+                //.MaxAsync(p => p.Id)
+                //.Select(new Errorlog { k.Id, k.Category, k.Price });
+                //.Select(p => new { p.Id, p.Name, p.Price })
+                //.Union(_context.Products.Where(p => p.Id == id))
+                .FirstOrDefaultAsync();
+                
             if (product == null)
             {
                 return NoContent();
             }
 
-            productCache = product;
+            
             _cacheService.SetData("Product" + id, product, DateTimeOffset.Now.AddSeconds(_expirationSeconds));
 
-            return product;
+            return  _mapper.Map<ProductDTO>(product);
         }
         return productCache;
 
@@ -68,19 +81,20 @@ public class ProductsController : ControllerBase
     // PUT: api/Products/5
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutProduct(int id, Product product)
+    public async Task<IActionResult> PutProduct(int id, ProductDTO productDto)
     {
-        if (id != product.Id)
+        if (id != productDto.Id)
         {
             return BadRequest();
-        }
+        } 
 
-        _context.Entry(product).State = EntityState.Modified;
+        _context.Entry(_mapper.Map<Product>(productDto)).State = EntityState.Modified;
 
         try
         {
-            _cacheService.SetData("Product" + product.Id, product, DateTimeOffset.Now.AddSeconds(_expirationSeconds));
+            _cacheService.SetData("Product" + productDto.Id, productDto, DateTimeOffset.Now);
             await _context.SaveChangesAsync();
+            
         }
         catch (DbUpdateConcurrencyException)
         {

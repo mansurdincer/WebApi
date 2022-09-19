@@ -1,3 +1,4 @@
+using WebApi.Middlewares;
 using ConfigurationManager = WebApi.ConfigurationManager;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -82,9 +83,13 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+
+
 app.UseHttpsRedirection();
-app.UseAuthentication();
-app.UseAuthorization();
+app.UseErrorlogMiddleware();
+
+//app.UseAuthentication();
+//app.UseAuthorization();
 app.MapControllers();
 //app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 app.Run();
