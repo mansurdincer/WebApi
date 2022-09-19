@@ -1,4 +1,4 @@
-﻿namespace WebApi.DataTransferObjects;
+﻿namespace WebApi.DTOs;
 public class CategoryDTO
 {
     public int Id { get; set; }

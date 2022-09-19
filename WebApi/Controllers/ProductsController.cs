@@ -49,7 +49,7 @@ public class ProductsController : ControllerBase
         {
             //var product = await _context.Products.FindAsync(id);
 
-            var product = await _context.Products.Select(product => _mapper.Map<ProductDTO>(product)).FirstOrDefaultAsync(p => p.Id == id);
+            ProductDTO? product = await _context.Products.Select(product => _mapper.Map<ProductDTO>(product)).FirstOrDefaultAsync(p => p.Id == id);
 
             if (product == null)
             {
