@@ -1,1 +1,5 @@
-﻿namespace WebApi.Models; public class JWTTokenResponse { public string Token { get; set; } }
+﻿namespace WebApi.Models; 
+public class JWTTokenResponse : BaseEntity
+{ 
+    public string Token { get; set; } 
+}

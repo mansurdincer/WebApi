@@ -1,9 +1,7 @@
 ﻿namespace WebApi.Models;
 
-public class Product
-{
-    [Key]
-    public int Id { get; set; }
+public class Product : BaseEntity
+{    
     
     [StringLength(50)]
     public string Name { get; set; }

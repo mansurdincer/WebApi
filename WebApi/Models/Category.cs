@@ -1,5 +1,5 @@
 ﻿namespace WebApi.Models;
-public class Category
+public class Category : BaseEntity
 {
     public int Id { get; set; }
     public string Name { get; set; }

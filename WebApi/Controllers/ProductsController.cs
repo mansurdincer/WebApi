@@ -24,8 +24,8 @@ public class ProductsController : ControllerBase
     public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProducts()
     {
         var productCache = _cacheService.GetData<List<ProductDTO>>("Products");
-        int a = 0;
-        int s = 9 / a;
+        //int a = 0;
+        //int s = 9 / a;
         
         if (productCache == null)
         {
@@ -53,8 +53,7 @@ public class ProductsController : ControllerBase
         {
             //var product = await _context.Products.FindAsync(id);
 
-            var product = await _context.Products
-                .Where(p => p.Id == id)
+            var product = await _context.Products.Where(p => p.Id == id)
                 //.Take(10).Skip(20)
                 //.Count()
                 //.OrderBy(p => p.Id)
@@ -92,7 +91,7 @@ public class ProductsController : ControllerBase
 
         try
         {
-            _cacheService.SetData("Product" + productDto.Id, productDto, DateTimeOffset.Now);
+            _cacheService.SetData("Product" + productDto.Id, productDto, DateTimeOffset.Now.AddSeconds(_expirationSeconds));
             await _context.SaveChangesAsync();
             
         }
@@ -114,18 +113,18 @@ public class ProductsController : ControllerBase
     // POST: api/Products
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     [HttpPost]
-    public async Task<ActionResult<Product>> PostProduct(Product product)
+    public async Task<ActionResult<ProductDTO>> PostProduct(ProductDTO productDTO)
     {
         if (_context.Products == null)
         {
             return Problem("Entity set 'DbContextClass.Products'  is null.");
-        }
-        _context.Products.Add(product);
+        }        
+        _context.Products.Add(_mapper.Map<Product>(productDTO));
         await _context.SaveChangesAsync();
 
-        _cacheService.SetData("Product" + product.Id, product, DateTimeOffset.Now.AddSeconds(_expirationSeconds));
+        _cacheService.SetData("Product" + productDTO.Id, productDTO, DateTimeOffset.Now.AddSeconds(3));
 
-        return CreatedAtAction("GetProduct", new { id = product.Id }, product);
+        return CreatedAtAction("GetProduct", new { id = productDTO.Id }, productDTO);
     }
 
     // DELETE: api/Products/5
