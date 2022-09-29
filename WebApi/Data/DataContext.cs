@@ -1,10 +1,10 @@
 ﻿namespace WebApi.Data;
 
-public class DbContextClass : DbContext
+public class DataContext : DbContext
 {
     protected readonly IConfiguration Configuration;
 
-    public DbContextClass(IConfiguration configuration)
+    public DataContext(IConfiguration configuration)
     {
         Configuration = configuration;
     }

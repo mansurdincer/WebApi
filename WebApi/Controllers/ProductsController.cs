@@ -1,4 +1,4 @@
-﻿using WebApi.Models;
+﻿using WebApi.Entities;
 
 namespace WebApi.Controllers;
 
@@ -6,11 +6,11 @@ namespace WebApi.Controllers;
 [ApiController]
 public class ProductsController : ControllerBase
 {
-    private readonly DbContextClass _context;
+    private readonly DataContext _context;
     private readonly ICacheService _cacheService;
     private readonly int _expirationSeconds;
     private readonly IMapper _mapper;
-    public ProductsController(DbContextClass context, ICacheService cacheService, IMapper mapper)
+    public ProductsController(DataContext context, ICacheService cacheService, IMapper mapper)
     {
         _context = context;
         _cacheService = cacheService;
@@ -21,15 +21,15 @@ public class ProductsController : ControllerBase
 
     // GET: api/Products
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProducts()
+    public async Task<ActionResult<IEnumerable<ProductDto>>> GetProducts()
     {
-        var productCache = _cacheService.GetData<List<ProductDTO>>("Products");
+        var productCache = _cacheService.GetData<List<ProductDto>>("Products");
         //int a = 0;
         //int s = 9 / a;
         
         if (productCache == null)
         {
-            var products = await _context.Products.Select(product => _mapper.Map<ProductDTO>(product)).ToListAsync();
+            var products = await _context.Products.Select(product => _mapper.Map<ProductDto>(product)).ToListAsync();
 
             if (products != null)
             {
@@ -46,9 +46,9 @@ public class ProductsController : ControllerBase
 
     // GET: api/Products/5
     [HttpGet("{id}")]
-    public async Task<ActionResult<ProductDTO>> GetProduct(int id)
+    public async Task<ActionResult<ProductDto>> GetProduct(int id)
     {
-        var productCache = _cacheService.GetData<ProductDTO>("Product" + id);
+        var productCache = _cacheService.GetData<ProductDto>("Product" + id);
         if (productCache == null)
         {
             //var product = await _context.Products.FindAsync(id);
@@ -71,7 +71,7 @@ public class ProductsController : ControllerBase
             
             _cacheService.SetData("Product" + id, product, DateTimeOffset.Now.AddSeconds(_expirationSeconds));
 
-            return  _mapper.Map<ProductDTO>(product);
+            return  _mapper.Map<ProductDto>(product);
         }
         return productCache;
 
@@ -80,7 +80,7 @@ public class ProductsController : ControllerBase
     // PUT: api/Products/5
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutProduct(int id, ProductDTO productDto)
+    public async Task<IActionResult> PutProduct(int id, ProductDto productDto)
     {
         if (id != productDto.Id)
         {
@@ -113,7 +113,7 @@ public class ProductsController : ControllerBase
     // POST: api/Products
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     [HttpPost]
-    public async Task<ActionResult<ProductDTO>> PostProduct(ProductDTO productDTO)
+    public async Task<ActionResult<ProductDto>> PostProduct(ProductDto productDTO)
     {
         if (_context.Products == null)
         {

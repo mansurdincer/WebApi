@@ -3,9 +3,9 @@ public class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        CreateMap<Product, ProductDTO>();
-        CreateMap<ProductDTO, Product>();
+        CreateMap<Product, ProductDto>();
+        CreateMap<ProductDto, Product>();
         
-        CreateMap<Category, CategoryDTO>();
+        CreateMap<Category, CategoryDto>();
     }
 }

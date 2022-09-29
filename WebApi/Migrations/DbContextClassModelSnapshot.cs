@@ -10,7 +10,7 @@ using WebApi.Data;
 
 namespace WebApi.Migrations
 {
-    [DbContext(typeof(DbContextClass))]
+    [DbContext(typeof(DataContext))]
     partial class DbContextClassModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

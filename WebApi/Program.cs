@@ -43,7 +43,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<ICacheService, CacheService>();
 
-builder.Services.AddDbContext<DbContextClass>();
+builder.Services.AddDbContext<DataContext>();
 
 builder.Services.AddAuthentication(opt =>
 {

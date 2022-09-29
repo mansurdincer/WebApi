@@ -11,7 +11,7 @@ using WebApi.Data;
 
 namespace WebApi.Migrations
 {
-    [DbContext(typeof(DbContextClass))]
+    [DbContext(typeof(DataContext))]
     [Migration("20220919193830_init")]
     partial class init
     {
