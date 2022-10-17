@@ -1,8 +1,8 @@
 ﻿namespace WebApi.Entities;
 
-public class JobTitle : BaseEntity
+public class AbsenteeismType : BaseEntity
 {
     public string Name { get; set; }
     public string? Description { get; set; }
-    public virtual ICollection<Employee> Employees { get; set; }
+    public virtual ICollection<Absenteeism> Absenteeisms { get; set; }
 }

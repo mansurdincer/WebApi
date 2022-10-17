@@ -17,9 +17,22 @@ public class DataContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<UserRole>().HasKey(x => new { x.UserId, x.RoleId });
+
         new DbInitializer(modelBuilder).Seed();
     }
 
     public DbSet<Product> Products { get; set; }
     public DbSet<Category> Categories { get; set; }
+
+    public DbSet<User> Users { get; set; }
+    public DbSet<Entities.Role> Roles { get; set; }
+
+    //Department
+    public DbSet<Department> Departments { get; set; }
+    public DbSet<Employee> Employees { get; set; }
+    
+
+
 }

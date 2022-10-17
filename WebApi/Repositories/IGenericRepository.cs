@@ -8,5 +8,5 @@ public interface IGenericRepository<T> where T : BaseEntity, new()
     Task<T> Create(T entity);
     Task<T> Update(T entity);
     Task<bool> Delete(T entity);
-    Task<bool> Delete(int id);    
+    Task<bool> Delete(int id);
 }
