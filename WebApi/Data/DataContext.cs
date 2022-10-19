@@ -32,7 +32,8 @@ public class DataContext : DbContext
     //Department
     public DbSet<Department> Departments { get; set; }
     public DbSet<Employee> Employees { get; set; }
-    
+    public DbSet<Seniority> Seniorities { get; set; }
+
 
 
 }

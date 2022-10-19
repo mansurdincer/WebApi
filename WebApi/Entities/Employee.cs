@@ -22,4 +22,10 @@ public class Employee : BaseEntity
 
     public int? DepartmentId { get; set; }
     public virtual Department Department { get; set; }
+
+    public int? SeniorityId { get; set; }
+    public virtual Seniority Seniority { get; set; }
+
+    public int? RankId { get; set; }
+    public virtual Rank Rank { get; set; }
 }
