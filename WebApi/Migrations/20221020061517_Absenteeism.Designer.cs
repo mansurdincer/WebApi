@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApi.Data;
 
@@ -11,9 +12,10 @@ using WebApi.Data;
 namespace WebApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20221020061517_Absenteeism")]
+    partial class Absenteeism
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -89,7 +91,7 @@ namespace WebApi.Migrations
                             Id = 1,
                             AbsenteeismTypeId = 1,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9908),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1322),
                             Editor = 0,
                             EmployeeId = 1,
                             EndDate = new DateTime(2021, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -102,7 +104,7 @@ namespace WebApi.Migrations
                             Id = 2,
                             AbsenteeismTypeId = 2,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9912),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1326),
                             Editor = 0,
                             EmployeeId = 2,
                             EndDate = new DateTime(2021, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -115,7 +117,7 @@ namespace WebApi.Migrations
                             Id = 3,
                             AbsenteeismTypeId = 3,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9914),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1328),
                             Editor = 0,
                             EmployeeId = 3,
                             EndDate = new DateTime(2021, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -128,7 +130,7 @@ namespace WebApi.Migrations
                             Id = 4,
                             AbsenteeismTypeId = 4,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9915),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1329),
                             Editor = 0,
                             EmployeeId = 4,
                             EndDate = new DateTime(2021, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -141,7 +143,7 @@ namespace WebApi.Migrations
                             Id = 5,
                             AbsenteeismTypeId = 5,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9916),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1330),
                             Editor = 0,
                             EmployeeId = 5,
                             EndDate = new DateTime(2021, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -154,7 +156,7 @@ namespace WebApi.Migrations
                             Id = 6,
                             AbsenteeismTypeId = 6,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9917),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1331),
                             Editor = 0,
                             EmployeeId = 6,
                             EndDate = new DateTime(2021, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -206,7 +208,7 @@ namespace WebApi.Migrations
                         {
                             Id = 1,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9769),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1171),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -216,7 +218,7 @@ namespace WebApi.Migrations
                         {
                             Id = 2,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9778),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1180),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -226,7 +228,7 @@ namespace WebApi.Migrations
                         {
                             Id = 3,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9779),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1181),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -236,7 +238,7 @@ namespace WebApi.Migrations
                         {
                             Id = 4,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9780),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1181),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -246,7 +248,7 @@ namespace WebApi.Migrations
                         {
                             Id = 5,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9780),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1233),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -256,7 +258,7 @@ namespace WebApi.Migrations
                         {
                             Id = 6,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9781),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1235),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -266,7 +268,7 @@ namespace WebApi.Migrations
                         {
                             Id = 7,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9782),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1236),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -313,7 +315,7 @@ namespace WebApi.Migrations
                         {
                             Id = 1,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9936),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1353),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -323,7 +325,7 @@ namespace WebApi.Migrations
                         {
                             Id = 2,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9937),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1354),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -333,7 +335,7 @@ namespace WebApi.Migrations
                         {
                             Id = 3,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9938),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1355),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -388,7 +390,7 @@ namespace WebApi.Migrations
                         {
                             Id = 1,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3332),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6451),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -398,7 +400,7 @@ namespace WebApi.Migrations
                         {
                             Id = 2,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3335),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6453),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -408,7 +410,7 @@ namespace WebApi.Migrations
                         {
                             Id = 3,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3336),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6454),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -418,7 +420,7 @@ namespace WebApi.Migrations
                         {
                             Id = 4,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3336),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6455),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -428,7 +430,7 @@ namespace WebApi.Migrations
                         {
                             Id = 5,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3337),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6455),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -438,7 +440,7 @@ namespace WebApi.Migrations
                         {
                             Id = 6,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3338),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6456),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -448,7 +450,7 @@ namespace WebApi.Migrations
                         {
                             Id = 7,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3338),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6457),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -533,7 +535,7 @@ namespace WebApi.Migrations
                         {
                             Id = 1,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3356),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6470),
                             DateOfEmployment = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DepartmentId = 1,
                             Editor = 0,
@@ -551,7 +553,7 @@ namespace WebApi.Migrations
                         {
                             Id = 2,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3418),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6474),
                             DateOfEmployment = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DepartmentId = 2,
                             Editor = 0,
@@ -569,7 +571,7 @@ namespace WebApi.Migrations
                         {
                             Id = 3,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3421),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6476),
                             DateOfEmployment = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DepartmentId = 1,
                             Editor = 0,
@@ -587,7 +589,7 @@ namespace WebApi.Migrations
                         {
                             Id = 4,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3423),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6478),
                             DateOfEmployment = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DepartmentId = 1,
                             Editor = 0,
@@ -605,7 +607,7 @@ namespace WebApi.Migrations
                         {
                             Id = 5,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3424),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6479),
                             DateOfEmployment = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DepartmentId = 6,
                             Editor = 0,
@@ -623,7 +625,7 @@ namespace WebApi.Migrations
                         {
                             Id = 6,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3425),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6480),
                             DateOfEmployment = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DepartmentId = 4,
                             Editor = 0,
@@ -681,7 +683,7 @@ namespace WebApi.Migrations
                         {
                             Id = 1,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3309),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6435),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -691,7 +693,7 @@ namespace WebApi.Migrations
                         {
                             Id = 2,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3310),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6437),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -701,7 +703,7 @@ namespace WebApi.Migrations
                         {
                             Id = 3,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3311),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6438),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -711,7 +713,7 @@ namespace WebApi.Migrations
                         {
                             Id = 4,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3311),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6439),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -780,7 +782,7 @@ namespace WebApi.Migrations
                             Author = 0,
                             CategoryId = 1,
                             Cost = 0m,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9953),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1371),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -794,7 +796,7 @@ namespace WebApi.Migrations
                             Author = 0,
                             CategoryId = 1,
                             Cost = 0m,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9954),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1373),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -808,7 +810,7 @@ namespace WebApi.Migrations
                             Author = 0,
                             CategoryId = 2,
                             Cost = 0m,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9955),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1374),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -822,7 +824,7 @@ namespace WebApi.Migrations
                             Author = 0,
                             CategoryId = 2,
                             Cost = 0m,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9956),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1375),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -836,7 +838,7 @@ namespace WebApi.Migrations
                             Author = 0,
                             CategoryId = 3,
                             Cost = 0m,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9957),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1376),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -850,7 +852,7 @@ namespace WebApi.Migrations
                             Author = 0,
                             CategoryId = 3,
                             Cost = 0m,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 353, DateTimeKind.Local).AddTicks(9958),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 954, DateTimeKind.Local).AddTicks(1376),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -895,14 +897,14 @@ namespace WebApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Ranks");
+                    b.ToTable("Rank");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3093),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6290),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -913,7 +915,7 @@ namespace WebApi.Migrations
                         {
                             Id = 2,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3212),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6292),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -924,7 +926,7 @@ namespace WebApi.Migrations
                         {
                             Id = 3,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3213),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6293),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -935,7 +937,7 @@ namespace WebApi.Migrations
                         {
                             Id = 4,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3214),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6293),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -946,7 +948,7 @@ namespace WebApi.Migrations
                         {
                             Id = 5,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3215),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6294),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -957,7 +959,7 @@ namespace WebApi.Migrations
                         {
                             Id = 6,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3215),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6295),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -968,7 +970,7 @@ namespace WebApi.Migrations
                         {
                             Id = 7,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3216),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6296),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -979,7 +981,7 @@ namespace WebApi.Migrations
                         {
                             Id = 8,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3217),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6296),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -990,7 +992,7 @@ namespace WebApi.Migrations
                         {
                             Id = 9,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3220),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6297),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -1001,7 +1003,7 @@ namespace WebApi.Migrations
                         {
                             Id = 10,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3221),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6299),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -1012,7 +1014,7 @@ namespace WebApi.Migrations
                         {
                             Id = 11,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3222),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6366),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -1023,7 +1025,7 @@ namespace WebApi.Migrations
                         {
                             Id = 12,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3222),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6368),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -1074,7 +1076,7 @@ namespace WebApi.Migrations
                         {
                             Id = 1,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3272),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6404),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -1084,7 +1086,7 @@ namespace WebApi.Migrations
                         {
                             Id = 2,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3274),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6406),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -1134,7 +1136,7 @@ namespace WebApi.Migrations
                         {
                             Id = 1,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(2896),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6162),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -1145,7 +1147,7 @@ namespace WebApi.Migrations
                         {
                             Id = 2,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(2910),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6174),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -1156,7 +1158,7 @@ namespace WebApi.Migrations
                         {
                             Id = 3,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(2911),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6175),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -1167,7 +1169,7 @@ namespace WebApi.Migrations
                         {
                             Id = 4,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(2912),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6176),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -1178,7 +1180,7 @@ namespace WebApi.Migrations
                         {
                             Id = 5,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(2913),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6177),
                             Editor = 0,
                             IsActive = false,
                             IsDeleted = false,
@@ -1241,7 +1243,7 @@ namespace WebApi.Migrations
                             Id = 1,
                             Author = 0,
                             Confirmation = false,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3254),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6389),
                             Editor = 0,
                             Email = "",
                             IsActive = false,
@@ -1255,7 +1257,7 @@ namespace WebApi.Migrations
                             Id = 2,
                             Author = 0,
                             Confirmation = false,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3255),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6391),
                             Editor = 0,
                             Email = "",
                             IsActive = false,
@@ -1307,7 +1309,7 @@ namespace WebApi.Migrations
                             UserId = 1,
                             RoleId = 1,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3288),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6416),
                             Editor = 0,
                             Id = 0,
                             IsActive = false,
@@ -1318,7 +1320,7 @@ namespace WebApi.Migrations
                             UserId = 2,
                             RoleId = 2,
                             Author = 0,
-                            CreatedDate = new DateTime(2022, 10, 20, 9, 33, 55, 349, DateTimeKind.Local).AddTicks(3289),
+                            CreatedDate = new DateTime(2022, 10, 20, 9, 15, 16, 949, DateTimeKind.Local).AddTicks(6417),
                             Editor = 0,
                             Id = 0,
                             IsActive = false,

@@ -69,12 +69,12 @@ public class DbInitializer
             );
 
         modelBuilder.Entity<Employee>().HasData(
-            new Employee { Id = 1, Name = "Mansur", Surname = "Dinçer", Email = "mansur.dincer@filidea.com.tr", DepartmentId = 1, JobTitleId = 3, SeniorityId = 1, RankId = 1 },
-            new Employee { Id = 2, Name = "Döndü", Surname = "Yılmaz", Email = "dondu.yilmaz@filidea.com.tr", DepartmentId = 2, JobTitleId = 2, SeniorityId = 2, RankId = 2 },
-            new Employee { Id = 3, Name = "Muhammer", Surname = "Sayın", Email = "muhammer.sayin@filidea.com.tr", DepartmentId = 1, JobTitleId = 3, SeniorityId = 3, RankId = 3 },
-            new Employee { Id = 4, Name = "Abdullah", Surname = "Kasım", Email = "abdullah.kasim@filidea.com.tr", DepartmentId = 1, JobTitleId = 2, SeniorityId = 4, RankId = 4 },
-            new Employee { Id = 5, Name = "Fahri", Surname = "Yılmaz", Email = "fahri.yilmaz@filidea.com.tr", DepartmentId = 6, JobTitleId = 3, SeniorityId = 5, RankId = 5 },
-            new Employee { Id = 6, Name = "Mustafa", Surname = "Kalaycıoğlu", Email = "mustafa.kalaycioglu@filidea.com.tr", DepartmentId = 4, JobTitleId = 2, SeniorityId = 1, RankId = 6 }
+            new Employee { Id = 1, RegistrationNo = "10001", Name = "Mansur", Surname = "Dinçer", Email = "mansur.dincer@filidea.com.tr", DepartmentId = 1, JobTitleId = 3, SeniorityId = 1, RankId = 1 },
+            new Employee { Id = 2, RegistrationNo = "10002", Name = "Döndü", Surname = "Yılmaz", Email = "dondu.yilmaz@filidea.com.tr", DepartmentId = 2, JobTitleId = 2, SeniorityId = 2, RankId = 2 },
+            new Employee { Id = 3, RegistrationNo = "10003", Name = "Muhammer", Surname = "Sayın", Email = "muhammer.sayin@filidea.com.tr", DepartmentId = 1, JobTitleId = 3, SeniorityId = 3, RankId = 3 },
+            new Employee { Id = 4, RegistrationNo = "10004", Name = "Abdullah", Surname = "Kasım", Email = "abdullah.kasim@filidea.com.tr", DepartmentId = 1, JobTitleId = 2, SeniorityId = 4, RankId = 4 },
+            new Employee { Id = 5, RegistrationNo = "10005", Name = "Fahri", Surname = "Yılmaz", Email = "fahri.yilmaz@filidea.com.tr", DepartmentId = 6, JobTitleId = 3, SeniorityId = 5, RankId = 5 },
+            new Employee { Id = 6, RegistrationNo = "10006", Name = "Mustafa", Surname = "Kalaycıoğlu", Email = "mustafa.kalaycioglu@filidea.com.tr", DepartmentId = 4, JobTitleId = 2, SeniorityId = 1, RankId = 6 }
             );
 
         modelBuilder.Entity<AbsenteeismType>().HasData(
@@ -93,7 +93,7 @@ public class DbInitializer
             new Absenteeism { Id = 3, EmployeeId = 3, AbsenteeismTypeId = 3, StartDate = new DateTime(2021, 01, 03), EndDate = new DateTime(2021, 01, 04) },
             new Absenteeism { Id = 4, EmployeeId = 4, AbsenteeismTypeId = 4, StartDate = new DateTime(2021, 01, 04), EndDate = new DateTime(2021, 01, 05) },
             new Absenteeism { Id = 5, EmployeeId = 5, AbsenteeismTypeId = 5, StartDate = new DateTime(2021, 01, 05), EndDate = new DateTime(2021, 01, 06) },
-            new Absenteeism { Id = 6, EmployeeId = 6, AbsenteeismTypeId = 6, StartDate = new DateTime(2021, 01, 06), EndDate = new DateTime(2021, 01, 07) }            
+            new Absenteeism { Id = 6, EmployeeId = 6, AbsenteeismTypeId = 6, StartDate = new DateTime(2021, 01, 06), EndDate = new DateTime(2021, 01, 07) }
             );
 
         modelBuilder.Entity<Category>().HasData(

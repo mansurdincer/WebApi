@@ -5,8 +5,8 @@ public class Employee : BaseEntity
     public string RegistrationNo { get; set; }
     public string Name { get; set; }
     public string Surname { get; set; }
-    public DateOnly DateOfEmployment { get; set; }
-    public DateOnly? DateOfDismissal { get; set; }
+    public DateTime DateOfEmployment { get; set; }
+    public DateTime? DateOfDismissal { get; set; }
     
     public string Email { get; set; }
     //public string Phone { get; set; }
